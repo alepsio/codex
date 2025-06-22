@@ -14,9 +14,10 @@ This repository contains a minimal Django project that implements a basic portal
 ## Running
 
 ```
-python manage.py migrate
+python manage.py migrate  # create database tables
 python manage.py createsuperuser  # create admin user
 python manage.py runserver
 ```
+Migrations are included, so running `python manage.py migrate` will set up the database.
 
 Visit `http://localhost:8000/` to see the store.
