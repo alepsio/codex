@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Your Orders</h1>
+<ul class="list-group mb-4">
+  {% for order in orders %}
+  <li class="list-group-item">
+    {{ order.product.title }} - {{ order.created_at }}
+  </li>
+  {% empty %}
+  <li class="list-group-item">No orders yet.</li>
+  {% endfor %}
+</ul>
+<h2>Support Tickets</h2>
+<ul class="list-group">
+  {% for ticket in tickets %}
+  <li class="list-group-item">
+    {{ ticket.subject }} - {{ ticket.created_at }}
+  </li>
+  {% empty %}
+  <li class="list-group-item">No tickets.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
